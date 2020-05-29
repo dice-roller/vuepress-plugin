@@ -1,0 +1,9 @@
+# Ignore everything
+*
+
+# Except for these
+!/src/index.js
+!/src/enhanceAppFile.js
+!LICENSE
+!package.json
+!README.md
