@@ -1,5 +1,5 @@
 {
-  "name": "vuepress-plugin-dice-roller",
+  "name": "@dice-roller/vuepress-plugin",
   "version": "0.1.7",
   "description": "Plugin for VuePress that allows rolling dice",
   "main": "src/index.js",
@@ -11,19 +11,19 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/GreenImp/vuepress-plugin-dice-roller.git"
+    "url": "git+https://github.com/dice-roller/vuepress-plugin.git"
   },
   "keywords": [
     "vuepress",
     "dice",
     "roll"
   ],
-  "author": "GreenImp <info@greenimp.co.uk> (http://greenimp.co.uk)",
+  "author": "GreenImp Media <info@greenimp.co.uk> (http://greenimp.co.uk)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/GreenImp/vuepress-plugin-dice-roller/issues"
+    "url": "https://github.com/dice-roller/vuepress-plugin/issues"
   },
-  "homepage": "https://github.com/GreenImp/vuepress-plugin-dice-roller#readme",
+  "homepage": "https://github.com/dice-roller/vuepress-plugin",
   "dependencies": {
     "core-js": "^3.6.5",
     "markdown-it-container": "^2.0.0",
