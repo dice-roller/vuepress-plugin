@@ -1,8 +1,12 @@
-# vuepress-plugin-dice-roller
+<p align="center">
+    <img src="https://greenimp.github.io/rpg-dice-roller/hero.svg" alt="RPG Dice Roller" style="max-width: 100%;" width="180"/>
+</p>
+
+# RPG Dice Roller Vuepress Plugin
 
 Plugin for [VuePress](https://vuepress.vuejs.org/) that allows rolling dice.
 
-It is built upon this [RPG dice roller](https://github.com/GreenImp/rpg-dice-roller), and is used in its [documentation](https://greenimp.github.io/rpg-dice-roller).
+It is built upon this [RPG dice roller](https://github.com/GreenImp/rpg-dice-roller), and is used in the [documentation](https://greenimp.github.io/rpg-dice-roller).
 
 
 ## Install
@@ -10,9 +14,9 @@ It is built upon this [RPG dice roller](https://github.com/GreenImp/rpg-dice-rol
 Install the plugin:
 
 ```bash
-npm install -D vuepress-plugin-dice-roller
+npm install -D @dice-roller/vuepress-plugin
 # Or
-yarn add -D vuepress-plugin-dice-roller
+yarn add -D @dice-roller/vuepress-plugin
 ```
 
 Then add the plugin to your Vuepress config file:
