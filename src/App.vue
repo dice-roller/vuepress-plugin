@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import DiceRoller from 'vue-rpg-dice-roller/dist/vue-rpg-dice-roller.common';
+import DiceRoller from '@dice-roller/vue/dist/vue.common';
 
 export default {
   name: 'App',
