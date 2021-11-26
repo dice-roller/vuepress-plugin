@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="https://greenimp.github.io/rpg-dice-roller/hero.svg" alt="RPG Dice Roller" style="max-width: 100%;" width="180"/>
+    <img src="http://greenimp.github.io/rpg-dice-roller/dice-roller-logo.png" alt="RPG Dice Roller" style="max-width: 100%;" width="200"/>
 </p>
 
 # RPG Dice Roller Vuepress Plugin
@@ -23,10 +23,8 @@ Then add the plugin to your Vuepress config file:
 
 ```javascript
 module.exports = {
-  ...
   plugins: [
-    ...
-    'dice-roller',
+    '@dice-roller/vuepress-plugin-dice-roller',
   ],
 };
 ```
@@ -34,7 +32,13 @@ module.exports = {
 
 ## Usage
 
-You can add a dice roller anywhere by using the following markdown syntax, where `{notation}` is the optional notation to pre-fill the input with:
+You can add a die roller anywhere by using the following markdown syntax:
+
+```
+::: roll :::
+```
+
+You can even specify the default notation with:
 
 ```
 ::: roll {notation} :::
