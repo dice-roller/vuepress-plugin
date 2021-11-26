@@ -1,6 +1,6 @@
 {
   "name": "@dice-roller/vuepress-plugin-dice-roller",
-  "version": "0.1.9",
+  "version": "0.1.10",
   "description": "Plugin for VuePress that allows rolling dice",
   "main": "src/index.js",
   "scripts": {
