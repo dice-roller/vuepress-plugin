@@ -2,8 +2,8 @@
 *
 
 # Except for these
-!/src/index.js
-!/src/enhanceAppFile.js
+!/dist/*
+!/src/*
 !LICENSE
 !package.json
 !README.md

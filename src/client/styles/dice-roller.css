@@ -1,0 +1,116 @@
+.dice-roller{
+    margin: 1rem 0;
+    padding: 1rem 1.5rem;
+    color: var(--dice-roller-color);
+    background-color: var(--dice-roller-bg);
+    border-radius: var(--dice-roller-border-radius);
+}
+
+.dice-roller-output {
+    display: block;
+    margin: 0 0 1.5rem;
+    padding: 1rem 1.5rem;
+    color: var(--dice-roller-output-color);
+    font-family: var(--dice-roller-output-font-family);
+    font-size: 1.5rem;
+    line-height: 2rem;
+    background-color: var(--dice-roller-output-bg);
+    border-radius: var(--dice-roller-output-border-radius);
+    border-color: var(--dice-roller-output-border-color);
+    border-left-width: 8px;
+    border-left-style: solid;
+}
+
+.dice-roller-label {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+.dice-roller-input-group {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+
+@media (min-width: 720px) {
+    .dice-roller-input-group {
+        flex-direction: row;
+    }
+}
+
+.dice-roller-input {
+    box-sizing: border-box;
+    flex: 1 1 auto;
+    display: block;
+    padding: 0 1rem;
+    width: 100%;
+    height: var(--dice-roller-form-height);
+    color: var(--dice-roller-input-color);
+    font-size: 1rem;
+    background-color: var(--dice-roller-input-bg);
+    border-color: var(--dice-roller-input-border);
+    border-width: 1px;
+    border-style: solid;
+    outline: none;
+    cursor: text;
+    transition: all ease 0.3s;
+}
+
+.dice-roller-input:focus {
+    cursor: auto;
+    border-color: var(--dice-roller-input-border-focus);
+}
+
+@media (min-width: 720px) {
+    .dice-roller-input {
+        border-right-width: 0;
+    }
+}
+
+.dice-roller-input-invalid {
+    border-color: var(--dice-roller-error-color);
+}
+
+.dice-roller-button {
+    box-sizing: border-box;
+    display: block;
+    padding: 0 1rem;
+    height: var(--dice-roller-form-height);
+    color: var(--dice-roller-button-color);
+    font-weight: bold;
+    background: var(--dice-roller-button-bg);
+    border-color: var(--dice-roller-button-border-color);
+    border-width: 1px;
+    border-radius: 4px;
+    border-style: solid;
+    transition: all 0.3s ease;
+}
+
+.dice-roller-button:hover,
+.dice-roller-button:focus {
+    background: var(--dice-roller-button-bg-active);
+    outline: none;
+    cursor: pointer;
+}
+
+@media (min-width: 720px) {
+    .dice-roller-button {
+        border-left-width: 0;
+        border-radius: 0 4px 4px 0;
+    }
+}
+
+.dice-roller-error {
+    display: block;
+    margin-top: 1rem;
+    color: var(--dice-roller-error-color);
+    font-size: .875rem;
+    line-height: 1.25rem;
+}
