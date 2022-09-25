@@ -1,6 +1,6 @@
 {
   "name": "@dice-roller/vuepress-plugin-dice-roller",
-  "version": "0.1.10",
+  "version": "1.0.0",
   "description": "Plugin for VuePress that allows rolling dice",
   "type": "module",
   "exports": {
@@ -14,8 +14,7 @@
     "lib",
     "src"
   ],
-  "scripts": {
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/dice-roller/vuepress-plugin.git"
