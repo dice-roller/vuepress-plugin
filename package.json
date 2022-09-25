@@ -2,12 +2,19 @@
   "name": "@dice-roller/vuepress-plugin-dice-roller",
   "version": "0.1.10",
   "description": "Plugin for VuePress that allows rolling dice",
-  "main": "src/index.js",
+  "type": "module",
+  "exports": {
+    ".": "./src/node/index.js",
+    "./client": "./src/client/index.js",
+    "./package.json": "./package.json"
+  },
+  "main": "src/node/index.js",
+  "types": "src/node/index.d.ts",
+  "files": [
+    "lib",
+    "src"
+  ],
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint",
-    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -15,6 +22,7 @@
   },
   "keywords": [
     "vuepress",
+    "vuepress-plugin",
     "dice",
     "roll"
   ],
@@ -24,21 +32,18 @@
     "url": "https://github.com/dice-roller/vuepress-plugin/issues"
   },
   "homepage": "https://github.com/dice-roller/vuepress-plugin",
+  "peerDependencies": {
+    "vuepress": "^2.0.0-beta.51"
+  },
   "dependencies": {
-    "@dice-roller/vue": "^0.1.9",
-    "core-js": "^3.6.5",
-    "markdown-it-container": "^2.0.0",
-    "vue": "^2.6.12"
+    "@dice-roller/vue": "^1.0.0",
+    "markdown-it-container": "^3.0.0"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "~4.3.0",
-    "@vue/cli-plugin-eslint": "~4.3.0",
-    "@vue/cli-service": "~4.3.0",
-    "@vue/eslint-config-airbnb": "^5.1.0",
-    "babel-eslint": "^10.1.0",
-    "eslint": "^6.7.2",
-    "eslint-plugin-import": "^2.22.0",
-    "eslint-plugin-vue": "^6.2.2",
-    "vue-template-compiler": "^2.6.12"
+    "@vuepress/client": "^2.0.0-beta.51",
+    "@vuepress/core": "2.0.0-beta.51",
+    "@vuepress/utils": "^2.0.0-beta.51",
+    "vue": "^3.2.39",
+    "vuepress": "^2.0.0-beta.51"
   }
 }

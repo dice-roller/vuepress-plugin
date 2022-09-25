@@ -1,0 +1,31 @@
+:root {
+    --dice-roller-text-color: var(--c-text);
+
+    --dice-roller-bg: var(--c-bg-lighter);
+    --dice-roller-border-radius: 0;
+    --dice-roller-color: var(--dice-roller-text-color);
+
+    --dice-roller-output-bg: var(--c-bg);
+    --dice-roller-output-border-color: var(--c-brand);
+    --dice-roller-output-border-radius: 0;
+    --dice-roller-output-color: var(--dice-roller-text-color);
+    --dice-roller-output-font-family: var(--font-family-code);
+
+    --dice-roller-form-height: 2.75rem;
+
+    --dice-roller-input-bg: var(--c-bg);
+    --dice-roller-input-border: var(--c-border);
+    --dice-roller-input-border-focus: var(--c-brand);
+    --dice-roller-input-color: var(--dice-roller-text-color);
+
+    --dice-roller-button-bg: var(--c-brand);
+    --dice-roller-button-bg-active: var(--c-brand-light);
+    --dice-roller-button-border-color: var(--c-brand);
+    --dice-roller-button-color: var(--c-bg);
+
+    --dice-roller-error-color: var(--c-danger);
+}
+
+html.dark {
+    --dice-roller-bg: var(--c-bg-light);
+}
