@@ -1,0 +1,40 @@
+:root {
+    --dice-roller-text-color: #2c3e50;
+
+    --dice-roller-bg: #eeeeee;
+    --dice-roller-border-radius: 0;
+    --dice-roller-color: var(--dice-roller-text-color);
+
+    --dice-roller-output-bg: #ffffff;
+    --dice-roller-output-border-color: #d4f4c6;
+    --dice-roller-output-border-radius: 0;
+    --dice-roller-output-color: var(--dice-roller-text-color);
+    --dice-roller-output-font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+
+    --dice-roller-form-height: 2.75rem;
+
+    --dice-roller-input-bg: #ffffff;
+    --dice-roller-input-border: #eaecef;
+    --dice-roller-input-border-focus: #d4f4c6;
+    --dice-roller-input-color: var(--dice-roller-text-color);
+
+    --dice-roller-button-bg: linear-gradient(to bottom right, #eda18b, #d4f4c6);
+    --dice-roller-button-bg-active: linear-gradient(to bottom right, #d4f4c6, #eda18b);
+    --dice-roller-button-border-color: rgb(209 213 219);
+    --dice-roller-button-color: rgb(75 85 99);
+
+    --dice-roller-error-color: rgb(220 38 38);
+}
+
+html.dark {
+    --dice-roller-text-color: #adbac7;
+
+    --dice-roller-bg: #2b313a;
+
+    --dice-roller-output-bg: #22272e;
+
+    --dice-roller-input-bg: #22272e;
+    --dice-roller-input-border: #3e4c5a;
+
+    --dice-roller-error-color: rgb(254 202 202);
+}

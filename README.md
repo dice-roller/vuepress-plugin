@@ -1,12 +1,16 @@
 <p align="center">
-    <img src="http://greenimp.github.io/rpg-dice-roller/dice-roller-logo.png" alt="RPG Dice Roller" style="max-width: 100%;" width="200"/>
+    <img src="http://dice-roller.github.io/documentation/dice-roller-logo.png" alt="RPG Dice Roller" style="max-width: 100%;" width="200"/>
 </p>
 
 # RPG Dice Roller Vuepress Plugin
 
-Plugin for [VuePress](https://vuepress.vuejs.org/) that allows rolling dice.
+Plugin for [VuePress v2](https://v2.vuepress.vuejs.org/) that allows rolling dice. For Vuepress v1, use version [`v0.1.*`](https://github.com/dice-roller/vuepress-plugin/tree/v0.1.10) of this library.
 
-It is built upon this [RPG dice roller](https://github.com/GreenImp/rpg-dice-roller), and is used in the [documentation](https://greenimp.github.io/rpg-dice-roller).
+This library enables adding a dice roller component anywhere within a markdown file, with a simple syntax.
+
+It uses the [Dice Roller Vue component](https://github.com/dice-roller/vue), which is built upon the [RPG dice roller](https://github.com/dice-roller/rpg-dice-roller), and is used in the [Dice Roller documentation](https://dice-roller.github.io/documentation/).
+
+![Dice Roller component](./src/client/images/example.png)
 
 
 ## Install
@@ -14,19 +18,20 @@ It is built upon this [RPG dice roller](https://github.com/GreenImp/rpg-dice-rol
 Install the plugin:
 
 ```bash
-npm install -D @dice-roller/vuepress-plugin
-# Or
-yarn add -D @dice-roller/vuepress-plugin
+npm install -D @dice-roller/vuepress-plugin-dice-roller
 ```
 
 Then add the plugin to your Vuepress config file:
 
 ```javascript
-module.exports = {
-  plugins: [
-    '@dice-roller/vuepress-plugin-dice-roller',
-  ],
-};
+import { diceRollerPlugin } from '@dice-roller/vuepress-plugin-dice-roller';
+
+export default defineUserConfig({
+    ...
+    plugins: [
+        diceRollerPlugin()
+    ]
+});
 ```
 
 
@@ -53,3 +58,99 @@ For example:
 ```
 ::: roll (2*6)d10 / (4 - d20) :::
 ```
+
+
+## Customise
+
+### Styles
+
+You  can customise the style of the dice roller component via CSS variables.
+
+These are the variables, and their default values:
+
+```css
+:root {
+    --dice-roller-text-color: #2c3e50;
+
+    --dice-roller-bg: #eeeeee;
+    --dice-roller-border-radius: 0;
+    --dice-roller-color: var(--dice-roller-text-color);
+
+    --dice-roller-output-bg: #ffffff;
+    --dice-roller-output-border-color: #d4f4c6;
+    --dice-roller-output-border-radius: 0;
+    --dice-roller-output-color: var(--dice-roller-text-color);
+    --dice-roller-output-font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+
+    --dice-roller-form-height: 2.75rem;
+
+    --dice-roller-input-bg: #ffffff;
+    --dice-roller-input-border: #eaecef;
+    --dice-roller-input-border-focus: #d4f4c6;
+    --dice-roller-input-color: var(--dice-roller-text-color);
+
+    --dice-roller-button-bg: linear-gradient(to bottom right, #eda18b, #d4f4c6);
+    --dice-roller-button-bg-active: linear-gradient(to bottom right, #d4f4c6, #eda18b);
+    --dice-roller-button-border-color: rgb(209 213 219);
+    --dice-roller-button-color: rgb(75 85 99);
+
+    --dice-roller-error-color: rgb(220 38 38);
+}
+
+html.dark {
+    --dice-roller-text-color: #adbac7;
+
+    --dice-roller-bg: #2b313a;
+
+    --dice-roller-output-bg: #22272e;
+
+    --dice-roller-input-bg: #22272e;
+    --dice-roller-input-border: #3e4c5a;
+
+    --dice-roller-error-color: rgb(254 202 202);
+}
+```
+
+#### Default Vuepress theme
+
+If you're using the default Vuepress theme, we suggest the following overrides, to make it match your theme:
+
+```css
+:root {
+    --dice-roller-text-color: var(--c-text);
+
+    --dice-roller-bg: var(--c-bg-lighter);
+    --dice-roller-border-radius: 0;
+    --dice-roller-color: var(--dice-roller-text-color);
+
+    --dice-roller-output-bg: var(--c-bg);
+    --dice-roller-output-border-color: var(--c-brand);
+    --dice-roller-output-border-radius: 0;
+    --dice-roller-output-color: var(--dice-roller-text-color);
+    --dice-roller-output-font-family: var(--font-family-code);
+
+    --dice-roller-form-height: 2.75rem;
+
+    --dice-roller-input-bg: var(--c-bg);
+    --dice-roller-input-border: var(--c-border);
+    --dice-roller-input-border-focus: var(--c-brand);
+    --dice-roller-input-color: var(--dice-roller-text-color);
+
+    --dice-roller-button-bg: var(--c-brand);
+    --dice-roller-button-bg-active: var(--c-brand-light);
+    --dice-roller-button-border-color: var(--c-brand);
+    --dice-roller-button-color: var(--c-bg);
+
+    --dice-roller-error-color: var(--c-danger);
+}
+
+html.dark {
+    --dice-roller-bg: var(--c-bg-light);
+}
+```
+
+#### Custom styles not working
+
+There is [an issue with Vuepress](https://github.com/vuepress/vuepress-next/discussions/1099), whereby Plugin styling can take precendent over custom styling, causing these CSS overrides to not work.
+
+In this case, you may need to use `!important` to force your custom styling to take affect.
