@@ -35,7 +35,7 @@
     "vuepress": "^2.0.0-beta.51"
   },
   "dependencies": {
-    "@dice-roller/vue": "^1.0.2",
+    "@dice-roller/vue": "^1.0.3",
     "markdown-it-container": "^3.0.0"
   },
   "devDependencies": {
