@@ -1,8 +1,12 @@
 <p align="center">
-    <img src="http://dice-roller.github.io/documentation/dice-roller-logo.png" alt="RPG Dice Roller" style="max-width: 100%;" width="200"/>
+    <img src="https://dice-roller.github.io/documentation/dice-roller-logo.png" alt="RPG Dice Roller" style="max-width: 100%;" width="200"/>
 </p>
 
 # RPG Dice Roller Vuepress Plugin
+
+[![npm (scoped)](https://img.shields.io/npm/v/@dice-roller/vuepress-plugin-dice-roller?label=version)](https://www.npmjs.com/package/@dice-roller/vuepress-plugin-dice-roller)
+[![License](https://img.shields.io/npm/l/@dice-roller/vuepress-plugin-dice-roller)](./LICENSE.txt)
+
 
 Plugin for [VuePress v2](https://v2.vuepress.vuejs.org/) that allows rolling dice. For Vuepress v1, use version [`v0.1.*`](https://github.com/dice-roller/vuepress-plugin/tree/v0.1.10) of this library.
 
