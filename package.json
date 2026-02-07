@@ -36,7 +36,7 @@
   },
   "homepage": "https://github.com/dice-roller/vuepress-plugin",
   "peerDependencies": {
-    "vuepress": "2.0.0 || >=2.0.0-beta.51 <2.0.0-beta.50-pre"
+    "vuepress": "2.0.0 || >=2.0.0-beta.51 <2.0.0-beta.50-pre || 2.0.0-rc.26"
   },
   "dependencies": {
     "@dice-roller/markdown-it-dice-roller": "^1.1.1",
