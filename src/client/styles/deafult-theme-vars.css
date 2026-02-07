@@ -26,6 +26,6 @@
     --dice-roller-error-color: var(--c-danger);
 }
 
-html.dark {
+html[data-theme="dark"] {
     --dice-roller-bg: var(--c-bg-light);
 }

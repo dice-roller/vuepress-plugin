@@ -101,7 +101,7 @@ These are the variables, and their default values:
     --dice-roller-error-color: rgb(220 38 38);
 }
 
-html.dark {
+html[data-theme="dark"] {
     --dice-roller-text-color: #adbac7;
 
     --dice-roller-bg: #2b313a;
@@ -148,7 +148,7 @@ If you're using the default Vuepress theme, we suggest the following overrides, 
     --dice-roller-error-color: var(--c-danger);
 }
 
-html.dark {
+html[data-theme="dark"] {
     --dice-roller-bg: var(--c-bg-light);
 }
 ```

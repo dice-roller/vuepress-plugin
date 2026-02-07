@@ -26,7 +26,7 @@
     --dice-roller-error-color: rgb(220 38 38);
 }
 
-html.dark {
+html[data-theme="dark"]{
     --dice-roller-text-color: #adbac7;
 
     --dice-roller-bg: #2b313a;
