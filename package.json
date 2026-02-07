@@ -1,6 +1,6 @@
 {
   "name": "@dice-roller/vuepress-plugin-dice-roller",
-  "version": "1.3.1",
+  "version": "1.3.3",
   "description": "Plugin for VuePress that allows rolling dice",
   "type": "module",
   "exports": {
@@ -35,8 +35,8 @@
     "vuepress": "2.0.0 || >=2.0.0-beta.51 <2.0.0-beta.50-pre"
   },
   "dependencies": {
-    "@dice-roller/markdown-it-dice-roller": "^1.0.0",
-    "@dice-roller/vue": "^1.2.0"
+    "@dice-roller/markdown-it-dice-roller": "^1.1.1",
+    "@dice-roller/vue": "^1.3.0"
   },
   "devDependencies": {
     "@vuepress/client": "2.0.0 || >=2.0.0-beta.51 <2.0.0-beta.50-pre",
