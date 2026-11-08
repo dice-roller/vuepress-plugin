@@ -22,12 +22,8 @@ It uses the [Dice Roller Vue component](https://github.com/dice-roller/vue), whi
 Install the plugin:
 
 ```bash
-npm install -D @dice-roller/vuepress-plugin-dice-roller @dice-roller/vue@^1.3.3
+npm install -D @dice-roller/vuepress-plugin-dice-roller @dice-roller/vue
 ```
-
-The Vue component is a peer dependency with the range `^1.3.3 || ^2.0.0`, allowing the site to update it independently of this plugin. Local development uses the same range. This covers v1.3.3 and later v1 releases, plus stable v2 releases once published; prereleases are not included. V2 compatibility still needs verification when it is available.
-
-The component must continue to export `DiceRoller`, accept the `notation` prop and use the CSS classes targeted by this plugin. The Markdown plugin remains a normal dependency because this plugin uses its parsers internally. Its currently published versions still declare a v1-only component peer dependency; that unnecessary peer must be removed in a Markdown plugin release before the complete dependency tree can accept v2 without a peer conflict.
 
 Then add the plugin to your Vuepress config file:
 
